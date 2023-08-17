@@ -5,7 +5,6 @@ const PDFViewer = ({ pdfUrl }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const onDocumentComplete = (pages) => {
-    // You can store the total number of pages here if needed
   };
 
   const onPageComplete = (page) => {
