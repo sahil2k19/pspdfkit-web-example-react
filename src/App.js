@@ -1,20 +1,14 @@
-import { useState } from "react";
-import PdfViewerComponent from "./components/PdfViewerComponent";
-import "./App.css";
-
+import React from 'react';
+import './App.css';
+import PDFViewer from './components/PDFViewer';
+const document = 's.pdf'
 function App() {
-  const [document, setDocument] = useState("s.pdf");
-
-
   return (
     <div className="App">
-     
-      <div style={{
-        width:"50vw",
-        height:'50vh'
-      }} className="App-viewer">
-        <PdfViewerComponent document={document} />
-      </div>
+      <header className="App-header">
+        <h1>PDF Viewer App</h1>
+        <PDFViewer pdfUrl={document} />
+      </header>
     </div>
   );
 }
