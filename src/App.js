@@ -1,20 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PdfViewerComponent from "./components/PdfViewerComponent";
 import "./App.css";
-
+import axios from 'axios'
+import PDFViewer from "./components/PDFViewer";
 function App() {
-  const [document, setDocument] = useState("s.pdf");
-
+  const pdfUrl = 'http://ignou.ac.in/userfiles/Common-Prospectus-English.pdf';
 
   return (
-    <div className="App">
-     
-      <div style={{
-        width:"50vw",
-        height:'50vh'
-      }} className="App-viewer">
-        <PdfViewerComponent document={document} />
-      </div>
+    <div>
+      <h1>PDF Viewer</h1>
+      <PDFViewer pdfUrl={pdfUrl} />
     </div>
   );
 }
